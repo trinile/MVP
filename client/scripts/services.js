@@ -50,16 +50,19 @@ angular.module('mvp.services', [])
 .factory('Images', function($http) {
   var Images = {};
 
-  Images.getOne = function(callback) {
+  Images.getOne = function() {
     console.log('in get One');
-    // var config = {
-    //         headers: { 
-    //             'Cache-Control': 'no-cache',
-    //             'Content-Type': 'text/plain'
-    //         };
+    var url = "https://api.unsplash.com/photos/random/?client_id=";
+    var client_id = "c82bb4df5656c23402223e20167b53981262b8546bba563c70498d67408b08d7";
+    var options = [];
+    var randomKey = Math.random() * 5;
+
     return $http({
       method: 'GET', 
-      url: 'https://api.unsplash.com/photos/random/?client_id=c82bb4df5656c23402223e20167b53981262b8546bba563c70498d67408b08d7'
+      url: url + client_id,
+      // headers: { random: Math.random()* 70 },
+      // headers: { 'Cache-Control' : 'no-cache' },
+      hello:  Math.random () * 5 ,
     }).then(function(response) {
       console.log('in factory imagesGetOne', response.data.urls.small, response.data.user.name);
       return response.data;

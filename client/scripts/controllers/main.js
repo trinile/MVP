@@ -3,6 +3,7 @@ angular.module('mvp.quotes', [])
   //Upload Controller
     $scope.quote = {};
     $scope.image = {};
+    $scope.match = {};
     $scope.quoteFake = { quote: "helloooooooo", author: "Trini Le" };
     $scope.stockData = window.photosWithQuotes;
     console.log(window.photosWithQuotes);
@@ -45,11 +46,7 @@ angular.module('mvp.quotes', [])
       .catch(function(err) {
         console.log(err);
       });
+
     };
 
-    $scope.imageFromKeyWords = function(quoteObj) {
-      //split words 
-      // var words = quoteObj.quote.split(" ");
-      // var ignoreWords = ['and', 'the']
-    }
 });

@@ -7,15 +7,29 @@
     <button type="submit" class="btn btn-default">Add Quote!</button>
   </form>
 
+
+  <div class="displayMatch col-md-12 row" ng-show="match.exists">
+    <div class="imgDisplay col-md-8">
+      <img ng-src="{{match.url}}" class="img-rounded img-responsive" height="400px" width="600px">
+      <span class="quote">{{match.quote}}</span>
+      <span class="author">  ---{{match.author}}</span>
+    </div>
+    <div class="imagNav col-md-3">
+      <button type="button" class="btn remove" ng-click="removeMatch()">Remove Display</button>
+      <button type="button" class="btn" ng-click="tryAgain(match).bind(this)">Meh, Match me again!</button>
+      <button type="button" class="btn" ng-click="SaveMe(match).bind(this)">Save ME!</button>
+      </div>
+  </div>
+
   <div class="displayQuotes" ng-repeat="data in data track by $index">  
-    <div class="quoteBox col-md-4 col-x-4">
+    <div class="quoteBox col-md-4">
     <span class="quote">{{data.quote}}</span>
     <span class="author">  ---{{data.author }}</span>
     <div class="addons">
-    <button type="button" class="btn btn-primary">Match me!</button>
-    <button type="button" class="btn btn-success">Save</button>
-    <button type="button" class="btn btn-info addImage">AddImage</button>
-    <button type="button" class="btn btn-info tags">AddTags</button>
+    <button type="button" class="btn btn-primary" ng-click="matchQuote(data).bind(this)">Match me!</button>
+    <button type="button" class="btn btn-success" ng-click="tab=2">Save</button>
+    <button type="button" class="btn btn-info addImage">Like Me!</button>
+    <button type="button" class="btn btn-info tags" ng-click="tab=3">AddTags</button>
 
     </div>
 

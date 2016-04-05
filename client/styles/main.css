@@ -195,3 +195,46 @@ a:hover {
   right: 180px;
   bottom: 10px
 }
+
+.footer {
+  margin: 15px;
+  background-color: #ddd;
+  height: 60px;
+}
+
+.displayMatch {
+  font-size: 1.5em;
+}
+
+.imgDisplay {
+  padding: 15px;
+  border: 2px solid #5A6D64;
+  border-radius: 10px;
+  background-color: #A2C7B3;
+  margin: 15px;
+}
+
+.displayMatch img {
+  width: 100%;
+  /*padding: 15px;*/
+  margin: 10px auto;
+  border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #5A6D64;
+}
+
+.displayMatch span {
+  padding: 15px;
+}
+
+.imagNav {
+  margin: 10px auto;
+}
+.displayMatch {
+  width: 100%;
+}
+.displayFavs.btns {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
