@@ -1,0 +1,38 @@
+<div class="container" ng-controller="QuotesController">
+<p>HELLOOOOOO</p>
+  <div class="imageQuotes">
+  <p>Should have an image here</p>
+    <ul ng-repeat="photos in stockData">
+      <!-- <img ng-src="{{photos.imageURL}}"> -->
+      <span>
+        {{photos.quote }} 
+        by {{photos.author}}
+        Hi there
+        </span>
+    </ul>
+  </div>
+</div>
+
+<br/>
+<pre>
+{{stockData}}
+</pre>
+
+<!-- <div id='quotes' ng-controller="QuotesController">
+<div class="uploadQuote">
+  <h4>Enter a Quote</h4>
+  <form name="QuoteForm" ng-click="generateImage()">
+    <input type="textarea" name="quote" ng-model="quote.text">
+    <button type="submit">Generate</button>
+
+  </form>
+  </div>
+</div>
+<div class="newPhoto" ng-model="newPhoto">
+  <img src="">
+  <blockquote>
+    {{ QuoteForm.input.quote }}
+  </blockquote>
+</div>
+<pre>
+</pre> -->
