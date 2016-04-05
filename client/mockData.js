@@ -3,34 +3,36 @@ var photosWithQuotes = [
   {
     quote: 'When you need sleep, sleep.',
     author: 'Jane Doe',
-    imageURL: 'BigTreeArea.jpg'
+    imageURL: 'images/BigTreeArea.jpg'
   },
 
   {     
     quote: 'Well hello there',
     author: 'Jane Doe',
-    imageURL: 'BrightAngel.jpg'
+    imageURL: 'images/BrightAngel.jpg'
   },
 
   {     
     quote: 'Well hello there',
     author: 'Jane Doe',
-    imageURL: 'Bryce.jpg'
+    imageURL: 'images/Bryce.jpg'
   },
 
   {     
     quote: 'Well hello there',
     author: 'Jane Doe',
-    imageURL: 'GrandCanyon.jpg'
+    imageURL: 'images/GrandCanyon.jpg'
   },
 
   {     
     quote: 'Well hello there',
     author: 'Jane Doe',
-    imageURL: 'NewHampShire.jpg'
+    imageURL: 'images/NewHampShire.jpg'
   }
 
 ];
 
 
 window.photosWithQuotes = photosWithQuotes;
+
+console.log(window.photosWithQuotes);

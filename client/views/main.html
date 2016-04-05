@@ -2,21 +2,33 @@
 <p>HELLOOOOOO</p>
   <div class="imageQuotes">
   <p>Should have an image here</p>
-    <ul ng-repeat="photos in stockData">
-      <!-- <img ng-src="{{photos.imageURL}}"> -->
+
+  <form class="quoteForm" ng-model="quoteInput">
+
+  <input class="input" type="text" name="quote" placeholder="Type in quote"/>
+  <input class="input" type="text" name="author" placeholder="Type in author"/>
+  <button ngSubmit="">SUBMIT</button>
+  <input class="quote" type="submit" value="Generate Quote" ng-click="generateQuote()" />
+  <input class="image" type="submit" value="Generate Image" ng-click="generateImage()"/>
+  </form>
+
+  {{quoteFake}}
+    <ul ng-repeat="photos in stockData track by $index">
+      <img ng-src="{{photos.imageURL}}" width="250px" height="200px">
       <span>
-        {{photos.quote }} 
-        by {{photos.author}}
-        Hi there
+      {{quoteFake}}
         </span>
+      }
+      }
     </ul>
   </div>
+
+  <div class="ImageDisplay col-md-3">
+    <img ng-src="{{image.url}}">
+    <caption> Taken by {{image.name}} </caption>
 </div>
 
 <br/>
-<pre>
-{{stockData}}
-</pre>
 
 <!-- <div id='quotes' ng-controller="QuotesController">
 <div class="uploadQuote">

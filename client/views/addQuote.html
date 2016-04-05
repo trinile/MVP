@@ -1,0 +1,25 @@
+<div class="container" ng-controller="AddController">
+<h4>Add Your Own Quote and Save Them!</h4>
+
+  <form name="addOwnQuote" class="addOwnQuote" class="form-control" ng-submit="addQuote(quote)">
+    <textarea class="form-control" rows="3" ng-model="quote.quote" placeholder="Enter a Quote You'd Like to Add" name="quote"></textarea>
+    <input type="text" class="form-control" placeholder="Who said it? Give Credit!" name="author" ng-model="quote.author">
+    <button type="submit" class="btn btn-default">Add Quote!</button>
+  </form>
+
+  <div class="displayQuotes" ng-repeat="data in data track by $index">  
+    <div class="quoteBox col-md-4 col-x-4">
+    <span class="quote">{{data.quote}}</span>
+    <span class="author">  ---{{data.author }}</span>
+    <div class="addons">
+    <button type="button" class="btn btn-primary">Match me!</button>
+    <button type="button" class="btn btn-success">Save</button>
+    <button type="button" class="btn btn-info addImage">AddImage</button>
+    <button type="button" class="btn btn-info tags">AddTags</button>
+
+    </div>
+
+    </div>
+  </div>
+</div>
+

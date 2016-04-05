@@ -4,27 +4,24 @@ angular
     'mvp.services',
     'mvp.quotes',
     'mvp.favs',
+    'mvp.add',
     'ngRoute'
     // 'ngMessages',
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $httpProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'QuotesController'
       })
-      .when('/home', {
-        templateUrl: 'signin.html',
-        controller: 'AuthController'
-      })
       .when('/favorites', {
         templateUrl: 'views/favorites.html',
         controller: 'FavController'
       })
-      // .when('/search', {
-      //   templateUrl: 'views/search.html',
-      //   controller: 'SearchCtrl'
-      // })
+      .when('/addquote', {
+        templateUrl: 'views/addQuote.html',
+        controller: 'AddController'
+      })
       // .when('/upload', {
       //   templateUrl: 'views/upload.html',
       //   controller: 'UploadController'
@@ -34,5 +31,12 @@ angular
       //   controller: 'FavoritesCtrl'
       // })
       .otherwise('/');
-  });
 
+  $httpProvider.defaults.useXDomain = true;
+  // $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+  // $httpProvider.headers.common['cache-control'] = 'no-cache';
+  // $httpProvider.defaults.withCredentials = true;
+  // $httpProvider.headers.common["Access-Control-Allow-Origin"] = "*";
+  $httpProvider.defaults.cache = false;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  });

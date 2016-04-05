@@ -1,17 +1,11 @@
-'use strict';
+angular.module('mvp.favs', [])
+  .controller('FavController', function ($scope, Quotes) {
 
-/**
- * @ngdoc function
- * @name mvpApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the mvpApp
- */
-angular.module('mvp.favs')
-  .controller('FavController', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    //methods for favorites saved
+    $scope.favorites = [];
+    $scope.getFavs = function() {
+      Quotes.getAll().then(function(quotes) {
+        console.log('got quotes');
+      })
+    }
   });

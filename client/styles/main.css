@@ -143,3 +143,55 @@ a:hover {
   padding :15px;
   margin: 15px auto;
 } 
+
+
+.imageDisplay {
+  border: 1px solid #ddd;
+  padding: 15px;
+
+}
+.addOwnQuote {
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+.quoteBox {
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: white;
+  height: 150px;
+}
+.quoteBox span {
+  width: 100%;
+}
+
+.quoteBox.author {
+  font-style: italic;
+}
+
+.quoteBox.quote {
+  overflow: scroll;
+}
+
+.btn-success {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+.btn-info {
+  position: absolute;
+  right: 80px;
+  bottom: 10px;
+}
+.btn-primary {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.tags {
+  position: absolute;
+  background-color: purple;
+  right: 180px;
+  bottom: 10px
+}
